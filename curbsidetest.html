@@ -40,10 +40,12 @@ body {
 h1 {
   text-align: center;
   font-family: 'Permanent Marker', cursive;
+  font-size: 80px;
 }
 h2 {
   text-align: center;
   font-family: 'Architects Daughter', cursive;
+  font-size: 60px;
 }
 div {
   height: 300px;
@@ -62,6 +64,7 @@ p {
   padding: 10px;
   line-height: 25px;
   text-align: justify;
+  transition: height .5s;
 }
 .express {
   background: url("//i.imgur.com/Pssk30f.jpg");
@@ -78,6 +81,18 @@ p {
 .price {
     float: right; 
   }
+  small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
 </style>
 </head>
 
@@ -102,6 +117,11 @@ p {
 <small>Required for Curbside Clean Club membership</small>
 </p>
 </div>
+<script>
+     $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+    </script>
 </body><!-- End of Silex HEAD tag do not remove --></head>
 
 <body data-silex-id="body-initial" class="body-initial all-style enable-mobile prevent-resizable prevent-selectable editable-style silex-runtime" data-silex-type="container-element" style="">
